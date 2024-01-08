@@ -1,5 +1,5 @@
 
-import Button from '../atoms/button'
+import Button from '../atoms/Button/button'
 import Image from 'next/image'
 // import getDictionary from '@/app/dictionaries';
 import React from 'react';
