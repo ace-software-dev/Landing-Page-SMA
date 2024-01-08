@@ -1,4 +1,3 @@
-'use client'
 
 import Button from '../atoms/button'
 import Image from 'next/image'
