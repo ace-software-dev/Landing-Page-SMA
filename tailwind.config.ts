@@ -20,6 +20,13 @@ const config: Config = {
         green: {
           '800': '#3E5D43',
         },
+        'almost-black' : '#0D1717',
+        'almost-white' : '#EDEEE9',
+        'background' : '#EDEEE9',
+        'pastel-green' : '#F1F8EC',
+        'primary-green' : '#3E5D43',
+        'green-subtitle' : '#849785',
+        'green-text' : '#627243',
       },
     },
   },
