@@ -6,13 +6,13 @@ interface TitleProps {
   
   export default function Title({children, classes, size}: TitleProps) {
     if (size === undefined){
-      size = "text-3xl md:text-5xl"
+      size = "text-xl md:text-3xl"
     }
     return (
       <div className='flex flex-col justify-center items-center'>
         <div className={`
-          text-center bg-gradient-to-r from-white/60 via-white to-white/60 inline-block
-          text-transparent bg-clip-text ${size} font-medium ${classes}
+          text-center font-bold text-green-800 font-rufina
+          ${size} ${classes}
         `}>
           {children}
         </div>
