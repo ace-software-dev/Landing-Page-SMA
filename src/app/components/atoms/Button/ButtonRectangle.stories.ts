@@ -41,7 +41,7 @@ export const InactiveDisabled: Story = {
   },
 };
 
-export const Disabled: Story = {
+export const ActiveDisabled: Story = {
   args: {
     active: true,
     disabled: true,
