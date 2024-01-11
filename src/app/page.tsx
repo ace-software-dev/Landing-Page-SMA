@@ -1,4 +1,4 @@
-import Discover from "./components/organisms/conoce-nuestro-desarrollo"
+import Discover from "./components/organisms/discover"
 
 export default function Home() {
   return (
