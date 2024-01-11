@@ -13,8 +13,23 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'satoshi': ['var(--font-satoshi)', 'sans-serif'],
+      },
+      colors: {
+        green: {
+          'primary' : '#3E5D43',
+          'pastel' : '#F1F8EC',
+          'subtitle' : '#849785',
+          'text' : '#627243',
+        },
+        'almost-black' : '#0D1717',
+        'almost-white' : '#EDEEE9',
+        'background' : '#EDEEE9',
+      },
     },
   },
   plugins: [],
 }
 export default config
+
