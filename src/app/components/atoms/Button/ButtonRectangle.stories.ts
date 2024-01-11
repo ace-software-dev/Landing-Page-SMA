@@ -26,6 +26,13 @@ export const Active: Story = {
     children: 'Hello',
   },
 };
+export const Inactive: Story = {
+  args: {
+    active: false,
+    disabled: false,
+    children: 'Hello',
+  },
+};
 export const Enabled: Story = {
   args: {
     active: true,
