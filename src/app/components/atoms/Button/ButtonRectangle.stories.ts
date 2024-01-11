@@ -33,10 +33,10 @@ export const Inactive: Story = {
     children: 'Hello',
   },
 };
-export const Enabled: Story = {
+export const InactiveDisabled: Story = {
   args: {
-    active: true,
-    disabled: false,
+    active: false,
+    disabled: true,
     children: 'Hello',
   },
 };
