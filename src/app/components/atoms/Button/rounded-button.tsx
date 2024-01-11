@@ -1,13 +1,13 @@
 import React from 'react'
 
-interface ButtonProps {
+interface RoundedButtonProps {
   children: React.ReactNode,
   classes?: string,
   type?: 'submit' | 'button' | 'reset',
   disabled?: boolean,
 }
 
-export default function Button({ children, classes, type = 'button', disabled = false }: ButtonProps) {
+export default function RoundedButton({ children, classes, type = 'button', disabled = false }: RoundedButtonProps) {
   return (
     <button type={type} className={`
         px-8 py-4 bg-green-primary rounded-full
