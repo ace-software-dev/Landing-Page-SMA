@@ -17,9 +17,6 @@ function isActive() {
    return 'bg-transparent text-green-primary'
  }
 }
-
-//check fixed size
-//check font family
   return (
     <button type={type} className={`
         px-6 py-3 ${isActive()} rounded-lg border-2 border-green-primary font-satoshi font-medium text-xl
