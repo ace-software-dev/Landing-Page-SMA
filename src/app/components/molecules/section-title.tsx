@@ -1,4 +1,4 @@
-import Title from "../atoms/title"
+import Title from "../atoms/Title/title"
 
 interface SectionTitleProps {
   subtitle: string,
