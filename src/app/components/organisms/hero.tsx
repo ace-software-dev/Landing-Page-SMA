@@ -1,12 +1,10 @@
 
-import Button from '../atoms/Button/button'
-import Image from 'next/image'
-// import getDictionary from '@/app/dictionaries';
+import RoundedButton from '../atoms/Button/rounded-button';
+import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
 
 export default function Hero() {
-//   const dict = getDictionary();
 
   return (
     <section id="header">
@@ -34,7 +32,7 @@ export default function Hero() {
               </div>
               <div className="flex gap-8 justify-center items-center flex-col md:justify-start md:flex-row">
                 <Link href={'https://calendly.com/acesoftwaremx/amamos-verte-crecer'} target="_blank">
-                  <Button>dict.header.ctaButton</Button>
+                  <RoundedButton>dict.header.ctaButton</RoundedButton>
                 </Link>
                 <div className="inline-flex gap-2 md:gap-4 h-8">
                   <Link href={"https://www.instagram.com/ace.software.mx?igsh=OHlweHJ4dWZwNHl3"} target="_blank">
