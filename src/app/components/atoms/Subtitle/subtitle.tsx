@@ -4,10 +4,10 @@ interface SubtitleProps {
   size?: string,
 }
 
-export default function Subtitle({children, classes, size = 'text-4xl md:text-4xl'}: SubtitleProps) {
+export default function Subtitle({children, classes, size = 'text-4xl'}: SubtitleProps) {
   return (
-    <div className='flex flex-col justify-center items-center'>
-      <div className={`text-green-subtitle ${size} font-medium ${classes}`}>
+    <div className='flex flex-col'>
+      <div className={`text-green-subtitle ${size} font-medium font-satoshi ${classes}`}>
         {children}
       </div>
     </div>
