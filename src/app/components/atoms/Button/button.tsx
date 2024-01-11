@@ -10,9 +10,9 @@ interface ButtonProps {
 export default function Button({ children, classes, type = 'button', disabled = false }: ButtonProps) {
   return (
     <button type={type} className={`
-        px-6 py-3 bg-gradient-to-l from-purple-600 to-blue-600 rounded-full
+        px-8 py-4 bg-green-primary rounded-full
         justify-center items-center inline-flex cursor-pointer hover:opacity-90
-        text-2xl font-semibold text-white ${classes} disabled:opacity-50 disabled:cursor-not-allowed ${disabled ? 'disabled' : ''}
+        text-lg font-semibold text-white ${classes} disabled:opacity-50 disabled:cursor-not-allowed ${disabled ? 'disabled' : ''}
       `}
       disabled={disabled}>
       {children}
