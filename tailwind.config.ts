@@ -26,7 +26,7 @@ const config: Config = {
         },
         'almost-black' : '#0D1717',
         'subtitle' : '#111212',
-        'almost-white' : '#EDEEE9',
+        'almost-white' : '#FDFDFD',
         'background' : '#EDEEE9',
       },
     },
@@ -34,4 +34,3 @@ const config: Config = {
   plugins: [],
 }
 export default config
-
