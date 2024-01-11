@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         'rufina': ['Rufina'],
+        'satoshi': ['var(--font-satoshi)', 'sans-serif'],
       },
       colors: {
         green: {
@@ -32,3 +33,4 @@ const config: Config = {
   plugins: [],
 }
 export default config
+
