@@ -1,4 +1,5 @@
 import Title from "../atoms/Title/title"
+import Subtitle from "../atoms/Subtitle/subtitle"
 
 interface SectionTitleProps {
   subtitle: string,
@@ -7,11 +8,9 @@ interface SectionTitleProps {
 
 export default function SectionTitle({subtitle, title}: SectionTitleProps) {
   return (
-    <div className='flex flex-col justify-center items-center'>
-      <div className="text-purple-300 text-[1.34rem] lg:text-2xl font-normal">
-        {subtitle}
-      </div>
+    <div className='flex flex-col justify-center items-center gap-2'>
       <Title>{title}</Title>
+      <Subtitle>{subtitle}</Subtitle>
     </div>
   )
 }
