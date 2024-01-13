@@ -16,20 +16,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Regular: Story = {
   args: {
-    children: 'San Miguel de Allende se posiciona entre los cinco destinos de mayor crecimiento en 2023, con un aumento del 400% en reservas.',
+    children: 'Hello',
   },
 };
 
 export const Italics: Story = {
   args: {
-    children: 'San Miguel de Allende se posiciona entre los cinco destinos de mayor crecimiento en 2023, con un aumento del 400% en reservas.',
+    children: 'Hello',
     classes: 'italic',
   },
 };
 
 export const Small: Story = {
   args: {
-    children: 'San Miguel de Allende se posiciona entre los cinco destinos de mayor crecimiento en 2023, con un aumento del 400% en reservas.',
+    children: 'Hello',
     size: 'text-xl',
   },
 };
