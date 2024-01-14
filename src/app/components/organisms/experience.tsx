@@ -28,7 +28,7 @@ export default function Experience() {
         <div className='flex justify-center items-center'>
           <Carousell>
             {images?.map((img, index) => (
-              <SwiperSlide key={index} className="!h-52">
+              <SwiperSlide key={index} className="!h-40 md:!h-52">
                 <div className='flex h-full justify-center items-center'>
                   <Image src={img.src} loading="lazy" alt={img.alt} className="w-auto h-auto max-w-40 max-h-40 md:max-w-52 md:max-h-52 object-cover filter grayscale" />
                 </div>
