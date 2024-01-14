@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #3E5D43 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #3E5D43 !important;
+}
