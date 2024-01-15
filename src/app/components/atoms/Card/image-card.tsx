@@ -10,10 +10,10 @@ export default function ImageCard({children, classes, src = " "}: ImageCardProps
     return (
     <div className='flex flex-col'>
         <Image
-        className={`${classes} rounded-md`}
+        className={`${classes} rounded-md w-full h-auto`}
         src={src}
-        width={1920}
-        height={1080}
+        width={1152}
+        height={648}
         alt="Picture of the author"
         />
         {children}
