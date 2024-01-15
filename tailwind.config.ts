@@ -29,6 +29,9 @@ const config: Config = {
         'almost-white' : '#FDFDFD',
         'background' : '#EDEEE9',
       },
+      screens: {
+        'xs': '425px',
+      },
     },
   },
   plugins: [],
