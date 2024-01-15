@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const Regular: Story = {
   args: {
     src: "/images/glamping_plano.png",
-    classes: 'rounded-xl',
+    classes: '',
   },
 };
 

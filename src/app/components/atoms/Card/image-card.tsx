@@ -12,8 +12,8 @@ export default function ImageCard({children, classes, src = " "}: ImageCardProps
         <Image
         className={`${classes} rounded-md`}
         src={src}
-        width={940}
-        height={530}
+        width={1920}
+        height={1080}
         alt="Picture of the author"
         />
         {children}
