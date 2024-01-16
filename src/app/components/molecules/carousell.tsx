@@ -7,10 +7,11 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 interface SwiperProps {
   children: React.ReactNode,
-  id: string
+  id: string,
+  time?: number,
 }
 
-export default function Carousell({ children, id }: SwiperProps) {
+export default function Carousell({ children, id, time = 2500 }: SwiperProps) {
   return (
     <div>
 
@@ -23,7 +24,7 @@ export default function Carousell({ children, id }: SwiperProps) {
             el: `.${id}`,
           }}
           autoplay={{
-            delay: 2500,
+            delay: time,
             disableOnInteraction: false,
           }}
           slidesPerView={1}

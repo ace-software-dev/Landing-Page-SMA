@@ -29,7 +29,7 @@ export default function Oportunity() {
           <Title>Oportunidad de inversión</Title>
         </div>
         <div className='flex justify-center items-center'>
-          <Carousell id="_oportunidad">
+          <Carousell id="_oportunidad" time={5000}>
             {images?.map((img, index) => (
               <SwiperSlide key={index}>
                 <CardOportunity src={img.src} alt={img.alt} text={img.text}/>
