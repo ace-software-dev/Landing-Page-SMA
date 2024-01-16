@@ -4,10 +4,10 @@ interface SubtitleProps {
     size?: string,
   }
   
-  export default function SectionSubtitle({children, classes, size = 'text-base sm:text-lg md:text-xl'}: SubtitleProps) {
+  export default function Text({children, classes, size = 'text-base sm:text-lg md:text-xl'}: SubtitleProps) {
     return (
       <div className='flex flex-col w-full'>
-        <div className={`text-subtitle ${size} text-center font-normal font-satoshi ${classes}`}>
+        <div className={`text-general ${size} text-center font-normal font-satoshi ${classes}`}>
           {children}
         </div>
       </div>
