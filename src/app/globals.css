@@ -2,4 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* add styles */
+.swiper-pagination-bullet-active {
+  background-color: #3E5D43 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #3E5D43 !important;
+}

@@ -25,6 +25,7 @@ const config: Config = {
           'text' : '#627243',
         },
         'almost-black' : '#0D1717',
+        'subtitle' : '#111212',
         'almost-white' : '#EDEEE9',
         'background' : '#EDEEE9',
       },
