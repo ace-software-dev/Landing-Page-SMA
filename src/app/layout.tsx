@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='bg-almost-white'>
       <body className={satoshi.variable}>{children}</body>
     </html>
   )
