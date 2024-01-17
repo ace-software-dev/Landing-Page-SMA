@@ -1,13 +1,19 @@
 
 'use client'
 
+interface TabsGalleryProps {
+    image1: string,
+    image2: string,
+    image3: string,
+}
+
 import React, {useState } from 'react';
-import RectangleButton from '../atoms/Button/button-rectangle';
-import ImageCard from '../atoms/Card/image-card';
-export default function GalleryTabs() {
+import RectangleButton from '../../atoms/Button/button-rectangle';
+import ImageCard from '../../atoms/Card/image-card';
+export default function TabsGallery( {image1, image2, image3} : TabsGalleryProps) {
     const [index, setIndex] = useState(1);
 
-    const images = ["/images/casaclub_plano.png", "/images/glamping_plano.png", "/images/cabaña_plantabaja.png"];
+    const images = [image1, image2, image3];
 
     return (
         <div className='gap-8 flex flex-col items-center max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl'>

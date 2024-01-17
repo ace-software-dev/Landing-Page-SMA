@@ -13,7 +13,6 @@ interface ButtonProps {
 export default function RectangleButton({ children, classes, type = 'button', disabled = false, active =true, action, index}: ButtonProps) {
 
 
-
 function isActive() {
  if(active) {
    return 'bg-green-primary text-almost-white'
