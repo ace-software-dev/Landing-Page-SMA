@@ -1,6 +1,6 @@
 'use client'
 import Title from "../atoms/Title/title";
-import CardOportunity from "../molecules/card-oportunity";
+import CardOportunity from "../molecules/CardOportunity/card-oportunity";
 import Carousell from "../molecules/carousell"
 import { SwiperSlide } from 'swiper/react';
 

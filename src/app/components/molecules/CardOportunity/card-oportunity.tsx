@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image"
-import Text from "../atoms/Text/text";
+import Text from "../../atoms/Text/text";
 
 interface CardProps {
   src: StaticImageData,
