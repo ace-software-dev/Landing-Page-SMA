@@ -20,13 +20,13 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experiencia" className='py-6 md:py-14 w-full'>
+    <section id="experiencia" className='w-full'>
       <div className='flex flex-col justify-center items-center mx-auto'>
         <div className="w-full">
           <SectionTitle title="Proyectos que nos respaldan" subtitle="20 años de experiencia colaborando en la gestión y dirección de proyectos inmobiliarios." />
         </div>
         <div className='flex justify-center items-center'>
-          <Carousell>
+          <Carousell id="_experiencia">
             {images?.map((img, index) => (
               <SwiperSlide key={index} className="!h-40 md:!h-52">
                 <div className='flex h-full justify-center items-center'>
