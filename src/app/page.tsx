@@ -2,6 +2,7 @@ import Title from './components/atoms/Title/title'
 import Discover from './components/organisms/discover'
 import Header from './components/organisms/header'
 import Experience from './components/organisms/experience'
+import Oportunity from './components/organisms/oportunity'
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <Title>Proyectos que nos respaldan</Title>
       </div>
         <Discover/>
+        <Oportunity/>
         <Experience/>
     </main>
   )

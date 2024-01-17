@@ -27,7 +27,8 @@ const config: Config = {
         'almost-black' : '#0D1717',
         'subtitle' : '#111212',
         'almost-white' : '#FDFDFD',
-        'background' : '#EDEEE9',
+        'header' : '#EDEEE9',
+        'general' : '#111212',
       },
       screens: {
         'xs': '425px',
