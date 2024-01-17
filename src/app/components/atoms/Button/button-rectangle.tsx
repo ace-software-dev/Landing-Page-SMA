@@ -22,7 +22,7 @@ function isActive() {
 }
   return (
     <button type={type} className={`
-        py-3 ${isActive()} rounded-lg border-2 border-green-primary font-satoshi font-medium text-xl
+        py-3 ${isActive()} rounded-lg border-2 border-green-primary font-satoshi font-medium
         justify-center items-center inline-flex cursor-pointer hover:opacity-80 ${classes} 
         disabled:opacity-50 disabled:cursor-not-allowed ${disabled ? 'disabled' : ''}
       `}
