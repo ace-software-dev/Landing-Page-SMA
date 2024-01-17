@@ -7,14 +7,11 @@ import Oportunity from './components/organisms/oportunity'
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between bg-almost-white font-satoshi">
+    <main className="flex  flex-col items-center justify-between bg-almost-white font-satoshi gap-14">
       <Header />
-      <div className="flex">
-        <Title>Proyectos que nos respaldan</Title>
-      </div>
-        <Discover/>
-        <Oportunity/>
-        <Experience/>
+      <Discover/>
+      <Oportunity/>
+      <Experience/>
     </main>
   )
 }
