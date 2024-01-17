@@ -17,7 +17,7 @@ export default function TimelineItem({date, description, reverse}: TimelineItemP
 
   return (
     <div className={`flex ${directionClasses()} justify-center items-center gap-3`}>
-      <div className="text-center text-md sm:text-lg text-green-primary font-bold font-satoshi">{date}</div>
+      <div className="text-center text-md sm:text-lg text-green-primary font-bold font-satoshi w-10 sm:w-auto">{date}</div>
       <div className={`flex ${directionClasses()} items-center`}>
         <div className='border-2 rounded-full border-green-primary bg-green-pastel p-[2px] w-5 h-5'>
           <div className="rounded-full w-3 h-full bg-green-primary"></div>

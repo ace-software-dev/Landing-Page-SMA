@@ -15,7 +15,7 @@ export default function Timeline() {
           <TimelineItem date='2024' description='Inicio de obra' reverse />
         </div>
         <div className="ml-[86px] sm:ml-0 sm:mt-[82px]">
-          <TimelineItem date='2024' description='Entrega de proyecto' />
+          <TimelineItem date='Junio 2025' description='Entrega de proyecto' />
         </div>
       </div>
       <div className="w-[2px] h-96 sm:w-3/4 sm:h-[2px] sm:absolute bg-green-primary max-w-[48rem]"></div>
