@@ -19,3 +19,11 @@ export const Default: Story = {
     description: 'Comienzo del proyecto',
   },
 };
+
+export const Reverse: Story = {
+  args: {
+    date: '2023',
+    description: 'Comienzo del proyecto',
+    reverse: true,
+  },
+};

@@ -9,9 +9,9 @@ export default function TimelineItem({date, description, reverse}: TimelineItemP
   const textAlignment = reverse ? 'text-right' : 'text-left';
 
   return (
-    <div className={`flex flex-row${direction} sm:flex-col${direction} justify-center items-center gap-3`}>
+    <div className={`flex ${"flex-row"+direction} ${"sm:flex-col"+direction} justify-center items-center gap-3`}>
       <div className="text-center text-xl text-green-primary font-bold font-satoshi">{date}</div>
-      <div className={`flex flex-row${direction} sm:flex-col${direction} items-center`}>
+      <div className={`flex ${"flex-row"+direction} ${"sm:flex-col"+direction} items-center`}>
         <div className='border-2 rounded-full border-green-primary bg-green-pastel p-[2px] w-5 h-5'>
           <div className="rounded-full w-full h-full bg-green-primary"></div>
         </div>
