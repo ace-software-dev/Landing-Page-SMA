@@ -1,5 +1,6 @@
 import Title from './components/atoms/Title/title'
 import Discover from './components/organisms/discover'
+import Experience from './components/organisms/experience'
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <Title>Proyectos que nos respaldan</Title>
       </div>
         <Discover/>
+        <Experience/>
     </main>
   )
 }
