@@ -1,5 +1,5 @@
-import Title from "../atoms/Title/title"
-import SectionSubtitle from "../atoms/Section-Subtitle/section-subtitle"
+import Title from "../../atoms/Title/title"
+import SectionSubtitle from "../../atoms/Section-Subtitle/section-subtitle"
 
 interface SectionTitleProps {
   subtitle: string,
