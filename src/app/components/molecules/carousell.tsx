@@ -5,13 +5,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 
-interface SwiperProps {
+interface CarrousellProps {
   children: React.ReactNode,
   id: string,
   time?: number,
 }
 
-export default function Carousell({ children, id, time = 2500 }: SwiperProps) {
+export default function Carousell({ children, id, time = 2500 }: CarrousellProps) {
   return (
     <div>
 
