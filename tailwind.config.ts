@@ -25,13 +25,16 @@ const config: Config = {
           'text' : '#627243',
         },
         'almost-black' : '#0D1717',
+        'subtitle' : '#111212',
+        'almost-white' : '#FDFDFD',
+        'header' : '#EDEEE9',
         'general' : '#111212',
-        'almost-white' : '#EDEEE9',
-        'background' : '#FDFDFD',
+      },
+      screens: {
+        'xs': '425px',
       },
     },
   },
   plugins: [],
 }
 export default config
-
