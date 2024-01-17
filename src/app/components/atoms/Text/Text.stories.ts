@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import SectionSubtitle from './section-subtitle';
+import Text from './text';
 
 const meta = {
-  title: 'Atoms/Section-Subtitle',
-  component: SectionSubtitle,
+  title: 'Atoms/Text',
+  component: Text,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof SectionSubtitle>;
+} satisfies Meta<typeof Text>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

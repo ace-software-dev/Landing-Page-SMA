@@ -26,12 +26,15 @@ const config: Config = {
         },
         'almost-black' : '#0D1717',
         'subtitle' : '#111212',
-        'almost-white' : '#EDEEE9',
-        'background' : '#EDEEE9',
+        'almost-white' : '#FDFDFD',
+        'header' : '#EDEEE9',
+        'general' : '#111212',
+      },
+      screens: {
+        'xs': '425px',
       },
     },
   },
   plugins: [],
 }
 export default config
-
