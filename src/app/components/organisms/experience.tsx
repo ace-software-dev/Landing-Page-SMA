@@ -1,5 +1,5 @@
 'use client'
-import SectionTitle from "../molecules/section-title"
+import SectionTitle from "../molecules/SectionTitle/section-title"
 import Carousell from "../molecules/carousell"
 
 import Image from 'next/image';
