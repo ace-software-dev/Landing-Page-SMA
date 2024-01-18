@@ -30,6 +30,7 @@ const config: Config = {
         'almost-white' : '#FDFDFD',
         'header' : '#EDEEE9',
         'general' : '#111212',
+        'placeholder': '#C4CFC6',
       },
       screens: {
         'xs': '425px',
