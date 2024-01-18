@@ -2,6 +2,7 @@ import Discover from './components/organisms/discover'
 import Header from './components/organisms/header'
 import Experience from './components/organisms/experience'
 import Oportunity from './components/organisms/oportunity'
+import Timeline from './components/organisms/timeline'
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Discover/>
         <Oportunity/>
         <Experience/>
+        <Timeline />
     </main>
   )
 }
