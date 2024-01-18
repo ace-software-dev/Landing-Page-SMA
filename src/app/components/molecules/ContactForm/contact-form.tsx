@@ -18,7 +18,7 @@ export default function ContactForm({}: ContactFormProps) {
   const handleCityChange = (e: ChangeEvent<HTMLInputElement>) => { setCity(e.target.value) }
 
   return (
-    <div className='flex flex-1 gap-3 py-4 w-1/2 bg-header'>
+    <div className='flex flex-1 gap-3 py-4 bg-header'>
       <div className="flex flex-col gap-6 flex-1">
         <InputField value={name} type='text' name='name' label='Nombre Completo *' onChange={handleNameChange} />
         <InputField value={phone} type='text' name='phone' label='Teléfono *' onChange={handlePhoneChange} />
