@@ -4,6 +4,8 @@ import Experience from './components/organisms/experience'
 import Oportunity from './components/organisms/oportunity'
 import Timeline from './components/organisms/timeline'
 import Operations from './components/organisms/operations'
+import Contact from './components/organisms/contact'
+
 
 export default function Home() {
   return (
@@ -14,6 +16,7 @@ export default function Home() {
         <Operations/>
         <Experience/>
         <Timeline />
+        <Contact />
     </main>
   )
 }
