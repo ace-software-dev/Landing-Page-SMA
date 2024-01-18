@@ -1,9 +1,9 @@
 import OperationCard from '../molecules/operation-card';
-import Title from '../molecules/section-title';
 import ImageEvents from '../../../../public/images/events.png'
 import ImageSpa from '../../../../public/images/spa.png'
 import ImageFire from '../../../../public/images/fire.png'
 import ImageRestaurant from '../../../../public/images/restaurant.png'
+import Title from '../atoms/Title/title';
 
 export default function Operations() {
   const imagesData = [
@@ -14,7 +14,7 @@ export default function Operations() {
   ];
   return (
     <div className='w-full sm:max-w-md md:max-w-7xl'>
-      <Title title="Exclusividad de giros" subtitle=""/>
+      <Title>Exclusividad de giros</Title>
       <div className="flex flex-col md:flex-row py-5 md:py-9">
         {imagesData.map((image, index) => (
             <OperationCard
