@@ -13,7 +13,7 @@ export default function Operations() {
     { src: ImageRestaurant, alt: 'Restaurante', text: 'Restaurante' },
   ];
   return (
-    <div className='w-full sm:max-w-md md:max-w-7xl'>
+    <div className='w-full sm:max-w-md md:max-w-screen-2xl'>
       <Title>Exclusividad de giros</Title>
       <div className="flex flex-col md:flex-row py-5 md:py-9">
         {imagesData.map((image, index) => (
