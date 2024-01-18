@@ -1,5 +1,5 @@
 'use client'
-import SectionTitle from "../molecules/section-title"
+import SectionTitle from "../molecules/SectionTitle/section-title"
 import Carousell from "../molecules/carousell"
 
 import Image from 'next/image';
@@ -20,7 +20,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experiencia" className='w-full'>
+    <section id="experiencia" className='px-6 sm:px-12 md:px-14 lg:px-20 xl:px-24 w-full'>
       <div className='flex flex-col justify-center items-center mx-auto'>
         <div className="w-full">
           <SectionTitle title="Proyectos que nos respaldan" subtitle="20 años de experiencia colaborando en la gestión y dirección de proyectos inmobiliarios." />
