@@ -4,26 +4,18 @@ import CardOportunity from "../molecules/CardOportunity/card-oportunity";
 import Carousell from "../molecules/carousell"
 import { SwiperSlide } from 'swiper/react';
 
-import Reservaciones from '../../../../public/images/Reservaciones.png'
-import Romance from '../../../../public/images/Romance.png'
-import Oportunidad from '../../../../public/images/Oportunidad.png'
-import Premiado from '../../../../public/images/Premiado.png'
-import Retorno from '../../../../public/images/Retorno.png'
-import Experiencia from '../../../../public/images/Experiencia.png'
-
-
 export default function Oportunity() {
   const images = [
-    { src: Reservaciones, alt: "Reservaciones", text: "San Miguel de Allende dentro del Top #5 destinos de mayor crecimiento en 2023, con un aumento del 400% en reservas." },
-    { src: Romance, alt: "Romance", text: "Turismo romántico en San Miguel de Allende deja 3 mil millones en 2023, con un crecimiento proyectado del 10%." },
-    { src: Oportunidad, alt: "Oportunidad de Negocio", text: "El concepto de Glamping aumenta 5 a 10 nuevas unidades de negocio al mes en México." },
-    { src: Premiado, alt: "Destino Premiado", text: "Destino de lujo global, San Miguel de Allende, segunda Mejor Ciudad del Mundo según la WBA." },
-    { src: Retorno, alt: "Retorno prometedor", text: "Ofrecemos ROI de 24% el primer año, 36% a partir del segundo año y recuperación total en el tercer año." },
-    { src: Experiencia, alt: "Buena Experiencia", text: "Gestión de Casa Club con atención en cada detalle, dando experiencias excepcionales para nuestros inversionistas." },
+    { src: '/images/Reservaciones.png', alt: "Reservaciones", text: "San Miguel de Allende dentro del Top #5 destinos de mayor crecimiento en 2023, con un aumento del 400% en reservas." },
+    { src: '/images/Romance.png', alt: "Romance", text: "Turismo romántico en San Miguel de Allende deja 3 mil millones en 2023, con un crecimiento proyectado del 10%." },
+    { src: '/images/Oportunidad.png', alt: "Oportunidad de Negocio", text: "El concepto de Glamping aumenta 5 a 10 nuevas unidades de negocio al mes en México." },
+    { src: '/images/Premiado.png', alt: "Destino Premiado", text: "Destino de lujo global, San Miguel de Allende, segunda Mejor Ciudad del Mundo según la WBA." },
+    { src: '/images/Retorno.png', alt: "Retorno prometedor", text: "Ofrecemos ROI de 24% el primer año, 36% a partir del segundo año y recuperación total en el tercer año." },
+    { src: '/images/Experiencia.png', alt: "Buena Experiencia", text: "Gestión de Casa Club con atención en cada detalle, dando experiencias excepcionales para nuestros inversionistas." },
   ];
 
   return (
-    <section id="oportunidad" className='w-full'>
+    <section id="oportunidad" className='px-6 sm:px-12 md:px-14 lg:px-20 xl:px-24 w-full'>
       <div className='flex flex-col justify-center items-center mx-auto'>
         <div className="w-full">
           <Title>Oportunidad de inversión</Title>
