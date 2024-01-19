@@ -14,7 +14,7 @@ export default function ContactInformation({}: ContactInformationProps) {
       <div className="flex flex-col justify-center gap-5">
         <div className="flex items-center gap-6">
           <FontAwesomeIcon icon={faPhone} className='w-5 h-5 text-white text-lg' />
-          <div>+52 1 442 716 9906</div>
+          <div>+52 442 716 9906</div>
         </div>
         <div className="flex items-center gap-6">
           <FontAwesomeIcon icon={faEnvelope} className='w-5 h-5 text-white text-lg' />

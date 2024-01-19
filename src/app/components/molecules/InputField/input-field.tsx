@@ -8,6 +8,7 @@ interface InputFieldProps {
   placeholder?: string
   error?: boolean
   disabled?: boolean
+  required?: boolean
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -19,6 +20,7 @@ export default function InputField({
   placeholder,
   error,
   disabled,
+  required,
   onChange,
 }: InputFieldProps) {
   return (
@@ -35,6 +37,7 @@ export default function InputField({
           placeholder={placeholder}
           onChange={onChange}
           disabled={disabled}
+          required={required}
           className="w-full rounded-lg border-0 p-3 text-almost-black
             placeholder:text-placeholder
             focus:ring-1 focus:ring-green-subtitle focus-visible:outline-none
