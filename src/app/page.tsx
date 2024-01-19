@@ -9,7 +9,7 @@ import Contact from './components/organisms/contact'
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-12 md:gap-28">
+    <main className="flex flex-col items-center gap-12 md:gap-28 font-satoshi">
         <Header/>
         <Discover/>
         <Oportunity/>
