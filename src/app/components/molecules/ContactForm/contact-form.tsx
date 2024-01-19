@@ -3,6 +3,7 @@
 import { useState, ChangeEvent } from "react"
 import InputField from "../InputField/input-field"
 import RoundedButton from "../../atoms/Button/rounded-button";
+import Link from "next/link";
 
 interface ContactFormProps {}
 
@@ -31,7 +32,7 @@ export default function ContactForm({}: ContactFormProps) {
             type="checkbox"
             className="h-4 w-4 rounded border-gray-300 text-green-primary focus:ring-green-primary"
           />
-          <label htmlFor="aviso-privacidad" className="text-almost-black">Acepto Aviso de Privacidad *</label>
+          <label htmlFor="aviso-privacidad" className="text-almost-black">Acepto <Link className="text-green-primary" href="">Aviso de Privacidad *</Link></label>
         </div>
         <RoundedButton classes="w-fit self-center">Estoy interesado</RoundedButton>
       </div>

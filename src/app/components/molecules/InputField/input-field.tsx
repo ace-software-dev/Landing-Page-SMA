@@ -6,7 +6,7 @@ interface InputFieldProps {
   value: string | number
   name: string
   placeholder?: string
-  error?: boolean
+  error?: string
   disabled?: boolean
   required?: boolean
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
@@ -44,6 +44,7 @@ export default function InputField({
             disabled:bg-slate-50 disabled:text-slate-300 disabled:ring-1 disabled:ring-slate-200"
         />
       </div>
+      {error !== '' && <p className="mt-2 text-red-700">{error}</p>}
     </div>
   )
 }
