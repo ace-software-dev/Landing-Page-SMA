@@ -6,7 +6,7 @@ interface ContactInformationProps {
 
 export default function ContactInformation({}: ContactInformationProps) {
   return (
-    <div className="flex flex-1 flex-col p-6 items-start rounded-2xl bg-contact-info bg-center bg-no-repeat xs:bg-cover sm:bg-right-bottom  gap-6">
+    <div className="flex flex-1 flex-col p-6 items-start rounded-2xl bg-contact-info bg-center bg-no-repeat xs:bg-cover sm:bg-right-bottom gap-6 text-almost-white">
       <div className="flex flex-col items-start gap-2">
         <div className="text-xl font-bold">Información de Contacto</div>
         <div className="">¡Hablemos de tu próxima inversión!</div>
