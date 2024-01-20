@@ -9,3 +9,30 @@
 .swiper-pagination-bullet {
   background-color: #3E5D43 !important;
 }
+.swiper-button-prev {
+  background-image: url('/previous.svg') !important;
+  background-repeat: no-repeat;
+  left: 2rem !important;
+}
+
+.swiper-button-prev::after {
+  content: none !important;
+}
+
+.swiper-button-next {
+  background-image: url('/next.svg') !important;
+  background-repeat: no-repeat;
+  right: 2rem !important;
+}
+
+.swiper-button-next::after {
+  content: none !important;
+}
+
+#gallery-slide #slide-description {
+  opacity: 0;
+}
+
+#gallery-slide:hover #slide-description {
+  opacity: 1;
+}
