@@ -5,6 +5,8 @@ import Oportunity from './components/organisms/oportunity'
 import Timeline from './components/organisms/timeline'
 import Operations from './components/organisms/operations'
 import Location from './components/organisms/location'
+import 'leaflet/dist/leaflet.css';
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center gap-12 md:gap-28">
