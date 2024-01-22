@@ -4,7 +4,7 @@ import Experience from './components/organisms/experience'
 import Oportunity from './components/organisms/oportunity'
 import Timeline from './components/organisms/timeline'
 import Operations from './components/organisms/operations'
-
+import Location from './components/organisms/location'
 export default function Home() {
   return (
     <main className="flex flex-col items-center gap-12 md:gap-28">
@@ -14,6 +14,7 @@ export default function Home() {
         <Operations/>
         <Experience/>
         <Timeline />
+        <Location />
     </main>
   )
 }
