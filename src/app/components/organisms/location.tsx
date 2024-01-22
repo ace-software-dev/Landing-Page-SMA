@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from '../molecules/SectionTitle/section-title';
-import { GoogleMapsEmbed } from '@next/third-parties/google'
+import MapAtom from '../atoms/Map/map';
 
 
 export default function Location() {
@@ -17,7 +17,7 @@ export default function Location() {
         </div>
 
         <div className='flex flex-row w-full'>
-        <GoogleMapsEmbed
+        {/* <GoogleMapsEmbed
           apiKey="AIzaSyA2oBnN5Vzw8NDlZO7O6PlKrdY_OPXNLbY"
           height={600}
           width="600px"
@@ -25,7 +25,8 @@ export default function Location() {
           q="20.927441183582008, -100.7104233679535"
           language="es"
           zoom='13'
-        />
+        /> */}
+          <MapAtom/>
         </div>
 
       </div>
