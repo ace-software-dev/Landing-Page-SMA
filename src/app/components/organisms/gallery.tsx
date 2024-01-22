@@ -9,16 +9,27 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const images = [
-  {src: '/images/gallery/1_cabin.jpg', alt: 'Cabaña', description: 'Cabaña'},
+  {src: '/images/gallery/1_cabin.jpeg', alt: 'Cabaña', description: 'Cabaña'},
   {src: '/images/gallery/2_bathroom.jpg', alt: 'Cabaña', description: 'Cabaña'},
   {src: '/images/gallery/3_cabin.jpg', alt: 'Cabaña', description: 'Cabaña'},
-  {src: '/images/gallery/4_glamping.jpg', alt: 'Cabaña', description: 'Glamping'},
+  {src: '/images/gallery/11_cabin.jpg', alt: 'Cabaña', description: 'Cabaña'},
+  {src: '/images/gallery/4_glamping.jpg', alt: 'Glamping', description: 'Glamping'},
+  {src: '/images/gallery/5_bathroom.jpg', alt: 'Baño Glamping', description: 'Glamping'},
+  {src: '/images/gallery/6_glamping.jpg', alt: 'Glamping', description: 'Glamping'},
+  {src: '/images/gallery/7_casaclub.jpg', alt: 'Casa Club', description: 'Casa Club'},
+  {src: '/images/gallery/8_temazcal.jpeg', alt: 'Casa Club Temazcal', description: 'Casa Club'},
+  {src: '/images/gallery/12_temazcal.jpg', alt: 'Casa Club', description: 'Casa Club'},
+  {src: '/images/gallery/9_casaclub.jpg', alt: 'Casa Club', description: 'Casa Club'},
+  {src: '/images/gallery/13_casaclub.jpg', alt: 'Casa Club', description: 'Casa Club'},
+  {src: '/images/gallery/14_spa.jpg', alt: 'Spa', description: 'Casa Club'},
+  {src: '/images/gallery/15_spa.jpg', alt: 'Spa', description: 'Casa Club'},
+  {src: '/images/gallery/10_eventos.jpg', alt: 'Espacio para eventos', description: 'Eventos'},
 ];
 
 export default function Gallery() {
 
   return (
-    <section id="gallery" className='max-w-7xl w-full h-60 xs:h-72 sm:h-96 md:h-[32rem]'>
+    <section id="gallery" className='max-w-screen-2xl w-full h-60 xs:h-72 sm:h-96 md:h-[32rem] 2xl:h-[36rem]'>
       <Swiper
         autoplay={{
           delay: 5000,
@@ -37,8 +48,8 @@ export default function Gallery() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={1280}
-                height={657}
+                width={1536}
+                height={897}
                 className='h-full w-full object-cover'
               />
               <div className="relative text-almost-white font-satoshi">
