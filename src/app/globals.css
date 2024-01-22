@@ -12,7 +12,13 @@
 .swiper-button-prev {
   background-image: url('/previous.svg') !important;
   background-repeat: no-repeat;
-  left: 2rem !important;
+  background-size: contain;
+  left: 8vw !important;
+
+  @media (max-width: 639px) {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
 }
 
 .swiper-button-prev::after {
@@ -22,7 +28,13 @@
 .swiper-button-next {
   background-image: url('/next.svg') !important;
   background-repeat: no-repeat;
-  right: 2rem !important;
+  background-size: contain;
+  right: 8vw !important;
+
+  @media (max-width: 639px) {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
 }
 
 .swiper-button-next::after {
