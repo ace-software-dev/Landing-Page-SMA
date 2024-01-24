@@ -7,7 +7,7 @@
 
 ##  UI Checklist
 
-- [] Resposivo
+- [] Seccion Resposiva
 - [] Texto sin faltas de ortografía
 - [] Imágenes cuentan con texto alt
 
