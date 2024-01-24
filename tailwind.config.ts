@@ -12,6 +12,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'contact-info': "url('/images/contact-info.png')",
       },
       fontFamily: {
         'rufina': ['Rufina'],
@@ -30,6 +31,7 @@ const config: Config = {
         'almost-white' : '#FDFDFD',
         'header' : '#EDEEE9',
         'general' : '#111212',
+        'placeholder': '#C4CFC6',
       },
       screens: {
         'xs': '425px',

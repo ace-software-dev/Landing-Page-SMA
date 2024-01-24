@@ -5,20 +5,23 @@ import Oportunity from './components/organisms/oportunity'
 import Timeline from './components/organisms/timeline'
 import Operations from './components/organisms/operations'
 import Location from './components/organisms/location'
-import 'leaflet/dist/leaflet.css';
+import Contact from './components/organisms/contact'
 import Gallery from './components/organisms/gallery'
+import Installations from './components/organisms/installations'
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-12 md:gap-28">
+    <main className="flex flex-col items-center gap-12 md:gap-28 font-satoshi">
         <Header/>
         <Discover/>
+        <Installations />
         <Gallery />
         <Oportunity/>
         <Operations/>
         <Experience/>
         <Timeline />
         <Location />
+        <Contact />
     </main>
   )
 }
