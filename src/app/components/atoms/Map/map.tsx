@@ -4,9 +4,11 @@ import { GoogleMap, MarkerF, useJsApiLoader , InfoWindowF} from '@react-google-m
 
 
 const containerStyle = {
-  width: '750px',
-  height: '500px'
+  width: '100%',
+  height: '500px',
+  borderRadius: '0.5rem',
 };
+
 
 const places = [
   {
@@ -52,12 +54,12 @@ function MapAtom() {
 
   return isLoaded ? (
       <GoogleMap
+        className='rounded-lg'
         mapContainerStyle={containerStyle}
         center={center}
         zoom={13}
         onLoad={onLoad}
         onUnmount={onUnmount}
-        
       >
         <MarkerF
           icon={'/images/redmarker.svg'}
