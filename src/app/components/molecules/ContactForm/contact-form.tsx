@@ -18,7 +18,7 @@ export default function ContactForm({}: ContactFormProps) {
   const investmentOptions = [
     { name: 'Proyecto Completo', code: 'completo' },
     { name: 'Glamping', code: 'glamping' },
-    { name: 'Cabaña', code: 'cabin' },
+    { name: 'Cabañas', code: 'cabin' },
   ];
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => { setName(e.target.value) }
