@@ -32,6 +32,7 @@ const config: Config = {
         'header' : '#EDEEE9',
         'general' : '#111212',
         'placeholder': '#C4CFC6',
+        'footer' : '#849785'
       },
       screens: {
         'xs': '425px',
