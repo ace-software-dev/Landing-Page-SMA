@@ -4,8 +4,8 @@ import { GoogleMap, MarkerF, useJsApiLoader , InfoWindowF} from '@react-google-m
 
 
 const containerStyle = {
-  width: '600px',
-  height: '600px'
+  width: '750px',
+  height: '500px'
 };
 
 const places = [

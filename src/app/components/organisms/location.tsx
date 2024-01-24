@@ -8,10 +8,10 @@ import RoundedButton from '../atoms/Button/rounded-button';
 export default function Location() {
   
   return (
-    <section id="location" className='w-full  flex justify-center p-6 sm:p-10 md:p-14 font-satoshi'>
-      <div className="w-full flex flex-col gap-4 sm:gap-6 md:gap-20 sm:flex-row max-w-[68rem]">
+    <section id="location" className='flex flex-col items-center max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-7xl'>
+      <div className="flex flex-col gap-4 sm:gap-6 md:gap-10 lg:gap-16 xl:gap-20 lg:flex-row">
 
-        <div className='flex flex-col gap-10 items-center justify-center'>
+        <div className='flex flex-col gap-10 justify-center'>
           <SectionTitle 
             title='Ubicación Privilegiada' 
             subtitle='Experimenta el lujo y la conveniencia de una gran ubicación. En tan solo 15 minutos, sumérgete en la magia del centro histórico y disfruta de todo lo que ofrece.'
