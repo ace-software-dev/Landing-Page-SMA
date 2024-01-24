@@ -25,7 +25,7 @@ export default function Experience() {
         <div className="w-full">
           <SectionTitle title="Proyectos que nos respaldan" subtitle="20 años de experiencia colaborando en la gestión y dirección de proyectos inmobiliarios." />
         </div>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center w-full'>
           <Carousell id="_experiencia">
             {images?.map((img, index) => (
               <SwiperSlide key={index} className="!h-52">
