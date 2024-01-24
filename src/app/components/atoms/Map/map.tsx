@@ -2,7 +2,6 @@
 import React from 'react'
 import { GoogleMap, MarkerF, useJsApiLoader , InfoWindowF} from '@react-google-maps/api';
 
-
 interface Place {
   lat: number,
   lng: number,
@@ -14,7 +13,7 @@ interface MapProps {
   places: Place[],
 }
 
-function MapAtom({center, places }: MapProps) {
+export default function MapAtom({ center, places }: MapProps) {
   const [map, setMap] = React.useState(null)
   const [place, setPlace] = React.useState(center)
 
@@ -39,71 +38,71 @@ function MapAtom({center, places }: MapProps) {
   };
 
   return isLoaded ? (
-      <GoogleMap
-        className='rounded-lg'
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={13}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        { /* Center marker */ }
-        <MarkerF
-          icon={'/images/redmarker.svg'}
-          title={center.name}
-          position={center}
-          onClick={() => 
-            setPlace({ lat: center.lat, lng: center.lng , name: center.name})
-          }
-        />
-        { /* Other markers */}
-        {places.map((place,i) => (
-          <div>
+      <div>
+        <GoogleMap
+          className='rounded-lg'
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={13}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+        >
+          { /* Center marker */ }
           <MarkerF
-            icon={'/images/marker.svg'}
-            key={place.name + i.toString()}
-            title={place.name}
-            position={{ lat: place.lat, lng: place.lng }}
+            icon={'/images/redmarker.svg'}
+            title={center.name}
+            position={center}
             onClick={() => 
-              setPlace({ lat: place.lat, lng: place.lng , name: place.name})
+              setPlace({ lat: center.lat, lng: center.lng , name: center.name})
             }
           />
-          <InfoWindowF 
-            position={{ lat: place.lat, lng: place.lng }} 
+          { /* Other markers */}
+          {places.map((place,i) => (
+            <div>
+            <MarkerF
+              icon={'/images/marker.svg'}
+              key={place.name + i.toString()}
+              title={place.name}
+              position={{ lat: place.lat, lng: place.lng }}
+              onClick={() => 
+                setPlace({ lat: place.lat, lng: place.lng , name: place.name})
+              }
+            />
+            <InfoWindowF 
+              position={{ lat: place.lat, lng: place.lng }} 
+              options={{
+                pixelOffset: {
+                  width: 0,
+                  height: -40,
+                },
+              }}
+            >
+              <div className='rounded-lg'>
+                <p>{ place.name}</p>
+              </div>
+            </InfoWindowF>
+            </div>
+          
+          ))}
+          
+          { /* Info window of selected place */}
+          { place && <InfoWindowF
+            position={{ lat: place.lat, lng: place.lng }}
             options={{
               pixelOffset: {
                 width: 0,
                 height: -40,
               },
             }}
+            onCloseClick={() => setPlace(null)}
+            
           >
             <div className='rounded-lg'>
-              <p>{ place.name}</p>
+              <p>{place.name}</p>
             </div>
           </InfoWindowF>
-          </div>
-        
-        ))}
-        
-        { /* Info window of selected place */}
-        { place && <InfoWindowF
-          position={{ lat: place.lat, lng: place.lng }}
-          options={{
-            pixelOffset: {
-              width: 0,
-              height: -40,
-            },
-          }}
-          onCloseClick={() => setPlace(null)}
-          
-        >
-          <div className='rounded-lg'>
-            <p>{place.name}</p>
-          </div>
-        </InfoWindowF>
-        }
-      </GoogleMap>
+          }
+        </GoogleMap>
+      </div>
   ) : <></>
 }
-
-export default (MapAtom)
