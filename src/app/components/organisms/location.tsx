@@ -3,6 +3,30 @@ import SectionTitle from '../molecules/SectionTitle/section-title';
 import MapAtom from '../atoms/Map/map';
 import RoundedButton from '../atoms/Button/rounded-button';
 
+const places = [
+  {
+    lat: 20.913533166035844,
+    lng: -100.74378055060164,
+    name: 'Parroquia Centro'
+  },
+  {
+    lat: 20.898342336684696,
+    lng: -100.72659947263716,
+    name: 'Plaza la Luciérnaga'
+  },
+  {
+    lat: 20.93124265594304, 
+    lng: -100.6881409531946,
+    name: 'Splash Inn San Miguel'
+  },
+]
+
+const center = {
+    lat: 20.927441183582008,
+    lng: -100.7104233679535,
+    name: 'Glamping San Miguel'
+  };
+
 
 
 export default function Location() {
@@ -26,7 +50,7 @@ export default function Location() {
         </div>
 
         <div className='flex flex-col w-full lg:w-2/3'>
-          <MapAtom/>
+          <MapAtom center={center} places={places}/>
         </div>
 
       </div>
