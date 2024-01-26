@@ -14,7 +14,7 @@ export default function Topbar() {
 
         {/* Desktop navigation */}
         <nav>
-          <ul className="hidden md:flex justify-center items-center gap-4 lg:gap-8 space-x-2 m-8">
+          <ul className="hidden md:flex justify-center items-center gap-4 lg:gap-8 space-x-2 my-8">
             <li>
               <SectionText href="#desarrollo">Desarrollo</SectionText>
             </li>

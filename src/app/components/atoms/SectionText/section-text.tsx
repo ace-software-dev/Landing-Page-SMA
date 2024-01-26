@@ -8,7 +8,7 @@ interface SectionTextProps {
   size?: string,
 }
 
-export default function SectionText({ children, classes, href, size = 'text-base md:text-lg' }: SectionTextProps) {
+export default function SectionText({ children, classes, href, size = 'text-base md:text-sm lg:text-lg' }: SectionTextProps) {
   return (
     <Link href={href}>
       <div className='flex flex-col w-full'>
