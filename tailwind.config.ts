@@ -22,6 +22,7 @@ const config: Config = {
         green: {
           'primary' : '#3E5D43',
           'pastel' : '#F1F8EC',
+          'pastel2' : '#D5DDD7',
           'subtitle' : '#849785',
           'text' : '#627243',
         },
