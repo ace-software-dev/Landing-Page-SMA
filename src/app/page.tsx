@@ -7,6 +7,7 @@ import Operations from './components/organisms/operations'
 import Contact from './components/organisms/contact'
 import Gallery from './components/organisms/gallery'
 import Topbar from './components/organisms/topbar'
+import Installations from './components/organisms/installations'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex flex-col items-center gap-12 md:gap-28 font-satoshi">
         <Header />
         <Discover />
+        <Installations />
         <Gallery />
         <Oportunity />
         <Operations />

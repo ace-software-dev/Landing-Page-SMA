@@ -13,7 +13,7 @@ interface CarrousellProps {
 
 export default function Carousell({ children, id, time = 2500 }: CarrousellProps) {
   return (
-    <div>
+    <div className='w-full'>
 
       <div className='flex justify-center items-center max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto py-4 md:py-7 cursor-pointer'>
         <Swiper
