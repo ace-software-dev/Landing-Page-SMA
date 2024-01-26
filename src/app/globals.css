@@ -48,3 +48,45 @@
 #gallery-slide:hover #slide-description {
   opacity: 1;
 }
+
+.p-placeholder {
+  color: #C4CFC6;
+}
+
+.p-component {
+  font-family: var(--font-satoshi), sans-serif;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+  color: #3E5D43;
+  background: #eef2ff;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+  color: #3E5D43;
+  background: #F1F8EC;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+  border-color: #3E5D43;
+  background: #3E5D43;
+}
+
+.p-checkbox-box {
+  border: solid 1px #849785;
+}
+
+.p-multiselect:not(.p-disabled).p-focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 1px #849785;
+  border-color: #849785;
+}
+
+.p-multiselect-label {
+  min-width: 224px;
+}
+
+.p-multiselect-trigger {
+  color: #849785;
+}

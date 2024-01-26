@@ -3,8 +3,8 @@ import TextFooter from '../atoms/TextFooter/text-footer';
 
 export default function Discover() {
     return (
-        <div className="w-full bg-footer flex justify-center items-center py-2 lg:py-3 px-6">
-            <div className="space-y-2">
+        <div className="w-full bg-footer py-2 lg:py-3 px-6">
+            <div className="space-y-2 flex flex-col justify-center items-center ">
                 <TextFooter>*Las imágenes son referenciales.</TextFooter>
                 <TextFooter>*El proyecto está sujeto a modificaciones por parte del desarrollador.</TextFooter>
                 <div className='inline-flex'>
