@@ -19,7 +19,7 @@ export default function MapAtom({ center, places }: MapProps) {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyA2oBnN5Vzw8NDlZO7O6PlKrdY_OPXNLbY"
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
   })
 
   const onLoad = React.useCallback(function callback(map: any) {
@@ -40,7 +40,6 @@ export default function MapAtom({ center, places }: MapProps) {
   return isLoaded ? (
       <div>
         <GoogleMap
-          className='rounded-lg'
           mapContainerStyle={containerStyle}
           center={center}
           zoom={13}
@@ -58,7 +57,7 @@ export default function MapAtom({ center, places }: MapProps) {
           />
           { /* Other markers */}
           {places.map((place,i) => (
-            <div>
+            <div key={`marker-${i}`}> 
             <MarkerF
               icon={'/images/marker.svg'}
               key={place.name + i.toString()}
