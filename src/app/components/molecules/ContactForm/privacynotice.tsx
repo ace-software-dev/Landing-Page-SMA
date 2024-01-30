@@ -1,7 +1,7 @@
 // components/PrivacyNotice.tsx
 import React from 'react';
 
-const PrivacyNotice: React.FC = () => {
+export default function PrivacyNotice(): React.ReactNode{
   return (
     <>
       <h2 className="text-3xl font-bold mb-4 mt-6">Aviso de Privacidad</h2>
@@ -77,4 +77,3 @@ const PrivacyNotice: React.FC = () => {
   );
 };
 
-export default PrivacyNotice;
