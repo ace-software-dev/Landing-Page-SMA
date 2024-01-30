@@ -4,10 +4,12 @@ import Experience from './components/organisms/experience'
 import Oportunity from './components/organisms/oportunity'
 import Timeline from './components/organisms/timeline'
 import Operations from './components/organisms/operations'
+import Location from './components/organisms/location'
 import Contact from './components/organisms/contact'
 import Gallery from './components/organisms/gallery'
 import Topbar from './components/organisms/topbar'
 import Installations from './components/organisms/installations'
+import Footer from './components/organisms/footer'
 
 export default function Home() {
   return (
@@ -22,8 +24,10 @@ export default function Home() {
         <Operations />
         <Experience />
         <Timeline />
+        <Location />
         <Contact />
       </main>
+      <Footer />
     </div>
   )
 }
