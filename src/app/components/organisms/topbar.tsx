@@ -8,7 +8,7 @@ export default function Topbar() {
       <div className="sticky z-30 top-0 w-full h-[70px] px-8 pt-3 bg-header justify-between items-center inline-flex">
         <Link href="#header">
           <div className="w-12 md:w-16 flex items-center">
-            <img src="/images/Arboleda.png" alt="Logo" className="m-2" />
+            {/* si en el futuro hay un logo puede agregarse aqui */}
           </div>
         </Link>
 
