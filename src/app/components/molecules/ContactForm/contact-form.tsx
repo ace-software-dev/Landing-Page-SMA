@@ -1,11 +1,13 @@
 'use client'
 
-import { useState, ChangeEvent } from "react"
+import { useState, ChangeEvent, useEffect } from "react"
 import InputField from "../InputField/input-field"
 import RoundedButton from "../../atoms/Button/rounded-button";
 import Link from "next/link";
 import { MultiSelect } from 'primereact/multiselect';
 import "primereact/resources/themes/lara-light-indigo/theme.css";
+import Modal from "../../atoms/Modal/modal";
+import PrivacyNotice from "./privacynotice";
 
 interface ContactFormProps {}
 
@@ -15,11 +17,18 @@ export default function ContactForm({}: ContactFormProps) {
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
   const [interest, setInterest] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState('');
+  const [counter, setCounter] = useState(0);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   const investmentOptions = [
     { name: 'Proyecto Completo', code: 'completo' },
     { name: 'Glamping', code: 'glamping' },
     { name: 'Cabañas', code: 'cabin' },
   ];
+
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => { setName(e.target.value) }
   const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => { setPhone(e.target.value) }
@@ -28,9 +37,30 @@ export default function ContactForm({}: ContactFormProps) {
 
 
   function setFormData(data: any) {
+    setName(data.nombre);
+    setPhone(data.numero);
+    setEmail(data.correo);
+    setCity(data.ciudad);
+    setInterest(data.interesado);
 
   }
-  const [submissionStatus, setSubmissionStatus] = useState('');
+
+  useEffect(() => {
+    if (counter > 0) {
+      const timer = setTimeout(() => setCounter(counter - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [counter]);
+
+  useEffect(() => {
+    setCounter(5);
+
+    const timer = setTimeout(() => {
+      setSubmissionStatus('');
+    }, 5000);
+    return () => clearTimeout(timer);
+
+  }, [submissionStatus]);
 
   async function handleSubmit (e: any) {
 
@@ -63,25 +93,24 @@ export default function ContactForm({}: ContactFormProps) {
 
       const result = await response.json();
       if (result.success) {
-        setFormData({ nombre: '', correo: '', numero: '', comentarios: '' });
-        setSubmissionStatus("Su informacion ha sido enviada con exito");
+        setFormData({ nombre: '', correo: '', numero: '', ciudad: '', interesado: null});
+        setSubmissionStatus("Su información ha sido enviada con éxito");
       } else {
-        setFormData({ nombre: '', correo: '', numero: '', comentarios: '' });
-        setSubmissionStatus(" Ha ocurrido un error, intente de nuevo.");
+        setSubmissionStatus("Ha ocurrido un error, ");
 
       }
     } 
     catch (e) {
-        setFormData({ nombre: '', correo: '', numero: '', comentarios: '' });
-        setSubmissionStatus(" Ha ocurrido un error, intente de nuevo.");
+        setSubmissionStatus("Ha ocurrido un error de red, ");
     }
-
-    // Handle form submission logic here
   }
 
 
 
   return (
+    <div className="flex flex-col justify-center items-center ">
+
+    {submissionStatus === '' && 
     <form onSubmit={handleSubmit}>
       <div className='flex flex-1 gap-3 py-4 bg-header'>
         <input type="hidden" name="apikey" value={process.env.NEXT_PUBLIC_FORM_API_KEY || ''} />
@@ -101,14 +130,36 @@ export default function ContactForm({}: ContactFormProps) {
             <input
               id="aviso-privacidad"
               name="aviso-privacidad"
+              required={true}
               type="checkbox"
               className="h-4 w-4 rounded border-gray-300 text-green-primary focus:ring-green-primary"
             />
-            <label htmlFor="aviso-privacidad" className="text-almost-black">Acepto <Link className="text-green-primary" href="">Aviso de Privacidad *</Link></label>
+            <label htmlFor="aviso-privacidad" className="text-almost-black">Acepto <Link className="text-green-primary underline" href="/#contacto" onClick={openModal}>Aviso de Privacidad *</Link></label>
           </div>
           <RoundedButton type="submit"  classes="w-fit self-center">Estoy interesado</RoundedButton>
         </div>
       </div>
     </form>
+    }
+    {submissionStatus && 
+      <div className="flex flex-col w-full justify-center items-center text-center">
+        <label className=" text-green-text text-2xl font-medium"> {submissionStatus} </label>
+        {/* add timeout counter */}
+        <label  className="text-green-text text-2xl font-medium">
+            {
+              counter > 0  && 
+              (submissionStatus == 'Ha ocurrido un error, ' 
+                || submissionStatus == 'Ha ocurrido un error de red, '
+              )&& 
+              `vuelve a intentar en ${counter} segundos...`}
+        </label>
+      </div>}
+      {isModalOpen && 
+      <Modal onClose={closeModal}>
+        <PrivacyNotice />
+      </Modal>
+      }
+    </div>
+
   )
 }
