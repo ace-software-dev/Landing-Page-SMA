@@ -10,7 +10,7 @@ export default function Discover() {
                 <div className='inline-flex'>
                     <TextFooter>© Glamping SMA.</TextFooter>
                     <TextFooter classes="w-7">|</TextFooter>
-                    <a href="https://acesoftware.com.mx" className="underline text-almost-white">
+                    <a href="https://acesoftware.com.mx" className="underline text-almost-white" target="_blank">
                         <TextFooter classes="hover:underline">Desarrollado por Ace Software.</TextFooter>
                     </a>
                 </div>
