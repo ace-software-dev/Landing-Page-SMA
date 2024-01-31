@@ -14,7 +14,7 @@ export default function Discover() {
           subtitle='Donde la naturaleza, el lujo y la comodidad se encuentran en un entorno sustentable. Descubre tu espacio integral de lujo en San Miguel de Allende con casa club, glamping y cabañas de primera clase.'>
         </SectionTitle>
       </div>
-      <TabsGallery image1='/images/casaclub_plano.png' image2='/images/glamping_plano.png' image3='/images/cabaña_plantabaja.png'></TabsGallery>
+      <TabsGallery image1='/images/casaclub_plano.png' image2='/images/glamping_plano.png' image3='/images/Cabaña_2pisos.png'></TabsGallery>
     </section>
   )
 }
