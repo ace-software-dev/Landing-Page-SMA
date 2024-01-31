@@ -15,6 +15,7 @@ export default function ContactForm({}: ContactFormProps) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
   const [city, setCity] = useState('');
   const [interest, setInterest] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function ContactForm({}: ContactFormProps) {
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => { setName(e.target.value) }
   const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => { setPhone(e.target.value) }
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => { setEmail(e.target.value) }
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => { setEmail(e.target.value); setEmailError(''); }
   const handleCityChange = (e: ChangeEvent<HTMLInputElement>) => { setCity(e.target.value) }
 
 
@@ -62,10 +63,22 @@ export default function ContactForm({}: ContactFormProps) {
 
   }, [submissionStatus]);
 
+  function validateEmail(email: string) {
+    // Regular expression for email validation
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
   async function handleSubmit (e: any) {
 
     try {
       e.preventDefault();
+
+      if (!validateEmail(email)) {
+        setEmailError('Por favor, ingrese un correo electrónico válido.');
+        return;
+      }
+
       const formData = new FormData(e.target);
       const object = Object.fromEntries(formData);
       let selectedInterest = '';
@@ -76,7 +89,7 @@ export default function ContactForm({}: ContactFormProps) {
         }
         // console.log('Selected Interest', selectedInterest);
         object['Tipo de interesado'] = selectedInterest;
-        
+
       }
       const json = JSON.stringify(object);
       console.log('Form data', json);
@@ -99,7 +112,7 @@ export default function ContactForm({}: ContactFormProps) {
         setSubmissionStatus("Ha ocurrido un error, ");
 
       }
-    } 
+    }
     catch (e) {
         setSubmissionStatus("Ha ocurrido un error de red, ");
     }
@@ -110,14 +123,14 @@ export default function ContactForm({}: ContactFormProps) {
   return (
     <div className="flex flex-col justify-center items-center ">
 
-    {submissionStatus === '' && 
+    {submissionStatus === '' &&
     <form onSubmit={handleSubmit}>
       <div className='flex flex-1 gap-3 py-4 bg-header'>
         <input type="hidden" name="apikey" value={process.env.NEXT_PUBLIC_FORM_API_KEY || ''} />
         <div className="flex flex-col gap-4 md:gap-6 flex-1 w-full">
           <InputField value={name} type='text' name='name' label='Nombre Completo *' placeholder="Juan Estrada" required={true} onChange={handleNameChange} />
           <InputField value={phone} type='text' name='phone' label='Teléfono *' placeholder="+52 442 716 9906" required={true} onChange={handlePhoneChange} />
-          <InputField value={email} type='text' name='email' label='Email *' placeholder="juan@gmail.com" required={true} onChange={handleEmailChange} />
+          <InputField value={email} error={emailError} type='text' name='email' label='Email *' placeholder="juan@gmail.com" required={true} onChange={handleEmailChange} />
           <InputField value={city} type='text' name='city' label='Ciudad' placeholder="Querétaro" onChange={handleCityChange} />
           <div>
             <label htmlFor={name} className="font-bold text-green-subtitle font-satoshi">
@@ -141,20 +154,20 @@ export default function ContactForm({}: ContactFormProps) {
       </div>
     </form>
     }
-    {submissionStatus && 
+    {submissionStatus &&
       <div className="flex flex-col w-full justify-center items-center text-center">
         <label className=" text-green-text text-2xl font-medium"> {submissionStatus} </label>
         {/* add timeout counter */}
         <label  className="text-green-text text-2xl font-medium">
             {
-              counter > 0  && 
-              (submissionStatus == 'Ha ocurrido un error, ' 
+              counter > 0  &&
+              (submissionStatus == 'Ha ocurrido un error, '
                 || submissionStatus == 'Ha ocurrido un error de red, '
-              )&& 
+              )&&
               `vuelve a intentar en ${counter} segundos...`}
         </label>
       </div>}
-      {isModalOpen && 
+      {isModalOpen &&
       <Modal onClose={closeModal}>
         <PrivacyNotice />
       </Modal>
