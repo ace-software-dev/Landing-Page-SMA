@@ -1,4 +1,3 @@
-// components/PrivacyNotice.tsx
 import React from 'react';
 
 export default function PrivacyNotice(): React.ReactNode{

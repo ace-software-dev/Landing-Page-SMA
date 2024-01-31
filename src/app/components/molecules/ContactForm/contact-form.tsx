@@ -87,12 +87,11 @@ export default function ContactForm({}: ContactFormProps) {
         if (Array.isArray(interest)) {
           selectedInterest = interest.map((item: any) => item.name).join(', ');
         }
-        // console.log('Selected Interest', selectedInterest);
         object['Tipo de interesado'] = selectedInterest;
 
       }
       const json = JSON.stringify(object);
-      console.log('Form data', json);
+      
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
