@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <section id="header" className='bg-header w-full flex flex-col sm:flex-row justify-between items-center sm:items-end'>
-      <div className="flex flex-col justify-start items-center gap-5 px-2 sm:px-6 py-8 z-10
+      <div className="flex flex-col justify-start items-center gap-5 px-2 sm:px-6 pb-8 pt-2 z-10
         sm:w-1/2 sm:items-start sm:justify-center sm:ml-5
         md:place-self-center md:gap-8
         lg:w-2/5 lg:ml-16
@@ -17,7 +17,7 @@ export default function Header() {
         <div className="flex flex-col justify-center items-center gap-4 text-center sm:items-start sm:text-start">
           <Subtitle size='text-xl lg:text-2xl  xl:text-4xl' classes='italic align-center'>Naturaleza, Lujo y Encanto</Subtitle>
           <Title size='text-[2.5rem] lg:text-5xl xl:text-7xl' classes='leading-[3rem] sm:text-start'> Glamping <br /> San Miguel </Title>
-          <div className='text-almost-black text-base lg:text-xl  xs:w-80 lg:w-full'>Invierte en San Miguel de Allende, la mejor ciudad pequeña del <strong>mundo</strong> </div>
+          <div className='text-almost-black text-base lg:text-xl  xs:w-80 lg:w-full text-pretty'>Invierte en San Miguel de Allende, la mejor ciudad pequeña del <strong>mundo</strong> </div>
         </div>
         <RoundedButton>
           <div className='text-sm lg:text-lg'>

@@ -7,7 +7,7 @@ import SectionTitle from '../molecules/SectionTitle/section-title';
 export default function Discover() {
 
   return (
-    <section id="desarrollo" className='md:mx-10 gap-8 flex flex-col items-center max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-[978px]'>
+    <section id="desarrollo" className='px-5 md:mx-10 gap-8 flex flex-col items-center max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-[978px]'>
       <div className='flex lg:px-32'>
         <SectionTitle
           title='Conoce Nuestro Desarrollo'

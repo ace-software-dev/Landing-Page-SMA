@@ -48,7 +48,7 @@
 }
 
 .p-multiselect-label {
-  min-width: 224px;
+  max-width: calc(100vw - 1.5rem - 48px);
 }
 
 .p-multiselect-trigger {
