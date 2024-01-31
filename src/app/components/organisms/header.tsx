@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <section id="header" className='bg-header w-full flex flex-col sm:flex-row justify-between items-center sm:items-end'>
-      <div className="flex flex-col justify-start items-center gap-5 px-2 sm:px-6 py-8 z-10
+      <div className="flex flex-col justify-start items-center gap-5 px-2 sm:px-6 pb-8 pt-2 z-10
         sm:w-1/2 sm:items-start sm:justify-center sm:ml-5
         md:place-self-center md:gap-8
         lg:w-2/5 lg:ml-16

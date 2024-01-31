@@ -121,10 +121,10 @@ export default function ContactForm({}: ContactFormProps) {
 
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="flex flex-1 flex-col justify-center items-center ">
 
     {submissionStatus === '' &&
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="w-full">
       <div className='flex flex-1 gap-3 py-4 bg-header'>
         <input type="hidden" name="apikey" value={process.env.NEXT_PUBLIC_FORM_API_KEY || ''} />
         <div className="flex flex-col gap-4 md:gap-6 flex-1 w-full">
