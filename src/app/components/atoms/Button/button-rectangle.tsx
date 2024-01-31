@@ -7,7 +7,7 @@ interface ButtonProps {
   disabled?: boolean,
   active?: boolean,
   action: React.Dispatch<React.SetStateAction<number>>
-  index: number
+  index?: number
 }
 
 export default function RectangleButton({ children, classes, type = 'button', disabled = false, active =true, action, index}: ButtonProps) {
@@ -26,7 +26,7 @@ function isActive() {
         justify-center items-center inline-flex cursor-pointer hover:opacity-80 ${classes} 
         disabled:opacity-50 disabled:cursor-not-allowed max-h-14 max-w-40 whitespace-nowrap overflow-hidden ${disabled ? 'disabled' : ''}
       `}
-      disabled={disabled} onClick={ () => action(index)}>
+      disabled={disabled} onClick={ () => action(index ?? 0)}>
       {children}
     </button>
   )

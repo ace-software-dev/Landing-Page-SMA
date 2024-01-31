@@ -12,7 +12,7 @@ const meta = {
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof TextOperations>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

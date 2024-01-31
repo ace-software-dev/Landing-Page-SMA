@@ -83,12 +83,13 @@ export default function ContactForm({}: ContactFormProps) {
       const object = Object.fromEntries(formData);
       let selectedInterest = '';
 
-      if (interest !== null) {
+      if (interest !== null && interest !== undefined) {
         if (Array.isArray(interest)) {
-          selectedInterest = interest.map((item: any) => item.name).join(', ');
+          if (interest !== null && interest !== undefined) {
+            selectedInterest = (interest as any[]).map((item: any) => item.name).join(', ');
+          }
         }
         object['Tipo de interesado'] = selectedInterest;
-
       }
       const json = JSON.stringify(object);
       
