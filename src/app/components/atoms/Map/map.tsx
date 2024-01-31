@@ -15,7 +15,7 @@ interface MapProps {
 
 export default function MapAtom({ center, places }: MapProps) {
   const [map, setMap] = React.useState(null)
-  const [place, setPlace] = React.useState(center)
+  const [place, setPlace] = React.useState<Place | null>(center);
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -73,6 +73,9 @@ export default function MapAtom({ center, places }: MapProps) {
                 pixelOffset: {
                   width: 0,
                   height: -40,
+                  equals(other: any) {
+                    return true
+                  }
                 },
               }}
             >
@@ -91,6 +94,9 @@ export default function MapAtom({ center, places }: MapProps) {
               pixelOffset: {
                 width: 0,
                 height: -40,
+                equals(other: any) {
+                    return true
+                  }
               },
             }}
             onCloseClick={() => setPlace(null)}
