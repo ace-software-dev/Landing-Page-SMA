@@ -34,7 +34,7 @@ export default function Gallery() {
       <Swiper
         autoplay={{
           delay: 5000,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
         }}
         modules={[Navigation, Autoplay]}
         navigation={{
@@ -58,7 +58,7 @@ export default function Gallery() {
                 sm:justify-center sm:text-xl sm:py-3 md:text-2xl lg:text-3xl lg:py-4
               ">
                 {image.description}
-                <Link href="/#contact" className="rounded-full border-2 border-almost-white hover:cursor-pointer
+                <Link href="/#contacto" className="rounded-full border-2 border-almost-white hover:cursor-pointer
                   text-sm px-3 py-1.5 sm:text-lg sm:px-4 sm:py-2 lg:text-xl lg:px-5 lg:py-3
                 ">
                   Contáctanos

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import Subtitle from '../atoms/Subtitle/subtitle';
 import Title from '../atoms/Title/title';
+import Link from 'next/link';
 
 export default function Header() {
 
@@ -19,11 +20,13 @@ export default function Header() {
           <Title size='text-[2.5rem] lg:text-5xl xl:text-7xl' classes='leading-[3rem] sm:text-start'> Glamping <br /> San Miguel </Title>
           <div className='text-almost-black text-base lg:text-xl  xs:w-80 lg:w-full text-pretty'>Invierte en San Miguel de Allende, la mejor ciudad pequeña del <strong>mundo</strong> </div>
         </div>
-        <RoundedButton>
-          <div className='text-sm lg:text-lg'>
-            Quiero invertir
-          </div>
-        </RoundedButton>
+        <Link href="#contacto">
+          <RoundedButton>
+            <div className='text-sm lg:text-lg'>
+              Quiero invertir
+            </div>
+          </RoundedButton>
+        </Link>
       </div>
       <div className="relative flex items-end justify-end -mt-12 sm:mt-8">
         <Image
